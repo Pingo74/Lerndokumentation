@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meine Arbeiten</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        .container {
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Meine Arbeiten</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#" role="button"></a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="grid">
+            <!-- Manually Insert PDF Items Here -->
+
+            <!-- Arbeit 1 -->
+            <section>
+                <hgroup>
+                    <h2>Arbeit 1</h2>
+                    <h3>Hallo</h3>
+                </hgroup>
+                <figure>
+                    <a href="pdfs/arbeit1.pdf" target="_blank">
+                        <img src="images/placeholder1.png" alt="Arbeit 1">
+                    </a>
+                    <figcaption><a href="pdfs/arbeit1.pdf" target="_blank">Arbeit 1</a></figcaption>
+                </figure>
+            </section>
+
+            <!-- Arbeit 2 -->
+            <section>
+                <hgroup>
+                    <h2>Test</h2>
+                    <h3>PDF-Datei</h3>
+                </hgroup>
+                <figure>
+                    <a href="pdfs/arbeit2.pdf" target="_blank">
+                        <img src="images/placeholder2.jpg" alt="Arbeit 2">
+                    </a>
+                    <figcaption><a href="pdfs/arbeit2.pdf" target="_blank">Arbeit 2</a></figcaption>
+                </figure>
+            </section>
+
+            <!-- Notiz: Kopieren Sie den folgenden Abschnitt für jede zusätzliche Arbeit und passen Sie die Titel, Bild- und PDF-Links an -->
+            <!--
+            <section>
+                <hgroup>
+                    <h2>Arbeit 3</h2>
+                    <h3>PDF-Datei</h3>
+                </hgroup>
+                <figure>
+                    <a href="pdfs/arbeit3.pdf" target="_blank">
+                        <img src="images/placeholder3.png" alt="Arbeit 3">
+                    </a>
+                    <figcaption><a href="pdfs/arbeit3.pdf" target="_blank">Arbeit 3</a></figcaption>
+                </figure>
+            </section>
+            -->
+        </div>
+    </main>
+
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Abonnieren</h2>
+                    <h3>Bleiben Sie auf dem Laufenden</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="Vorname" aria-label="Vorname" required />
+                    <input type="email" id="email" name="email" placeholder="E-Mail" aria-label="E-Mail" required />
+                    <button type="submit" onclick="event.preventDefault()">Abonnieren</button>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <footer class="container">
+        <small><a href="#">Impressum</a> • <a href="#">Datenschutz</a></small>
+    </footer>
+
+    <script>
+        // Simple Password Protection
+        const password = prompt("Bitte geben Sie das Passwort ein:");
+        if (password !== 'Test') {
+            alert("Falsches Passwort!");
+            window.location.href = "https://www.google.com"; // Redirect to Google if password is incorrect
+        }
+    </script>
+</body>
+
+</html>
